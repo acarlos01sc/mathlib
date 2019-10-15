@@ -16,5 +16,6 @@ Example:
 from basemath import natnumber
 
 x = natnumber(1577)
+
 x.factor
 
