@@ -7,7 +7,7 @@ This is a description of classes that provides some math functions.
 
 This class provides some methods exclusive to natural numbers:
 
-n - returns de natural number
+n - returns the natural number
 
 factorial - returns the factorial of the n number
 
