@@ -1,3 +1,0 @@
-# mathlib
-Python mathematical functions
-
