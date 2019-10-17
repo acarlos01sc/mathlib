@@ -41,3 +41,13 @@ class natnumber(object):
                         return False
                 else:
                         return len(self.factor) == 1
+
+        @property
+        def istriangular(self):
+            i = 1
+            while (((i*(i+1))/2) < self.n):
+                i += 1
+            if (((i*(i+1))/2) == self.n):
+                return True
+            else:
+                return False

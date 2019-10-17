@@ -5,21 +5,23 @@ This is a description of classes that provides some math functions.
 
 1 - class natnumber
 
-This class provides some methods exclusive to natural numbers:
+	This class provides some methods exclusive to natural numbers:
 
-n - returns the natural number
+	n - returns the natural number
 
-factorial - returns the factorial of the n number
+	factorial - returns the factorial of the n number
 
-factor - returns the prime factors in a list
+	factor - returns the prime factors in a list
 
-isprime - returns true if n is prime otherwise false
+	isprime - returns true if n is prime otherwise false
 
-Example:
+	istriangular - returns true if n is a triangular number
 
-from basemath import natnumber
+	Example:
 
-x = natnumber(1577)
+		from basemath import natnumber
 
-x.factor
+		x = natnumber(1577)
+
+		x.factor
 
