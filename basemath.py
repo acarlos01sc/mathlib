@@ -1,5 +1,16 @@
 from math import factorial
 
+# basemath contains some basic math classes
+
+# class natnumber get some characteristics of a natural number
+# the constructor is natnumber(n) where n is a natural number
+# the methods are:
+#		n            - returns the n number used in constructor
+#		factorial    - returns the factorial number of n
+#		factor       - returns the list of prime factors of n
+#		isprime      - returns true if n is a prime number otherwise false
+#		istriangular - returns true if n is a triangular number
+ 
 class natnumber(object):
 
         def __init__(self, x):
