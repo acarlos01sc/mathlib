@@ -20,6 +20,24 @@ class natnumber(object):
 
         def __testn(self):
                 assert (isinstance(self.n, int) and (self.n >= 0)), 'Invalid natural number!'
+                
+        def __calcfactors(self):
+                den = 2
+                num = self.n
+                while (num/den != 1):
+                    if (num % den == 0):
+                        self.__factor.append(den)
+                        num /= den
+                    else:
+                        den += 1
+                        break
+                while (num/den != 1):
+                    if (num % den == 0):
+                        self.__factor.append(den)
+                        num /= den
+                    else:
+                        den += 2
+                self.__factor.append(den)
 
         @property
         def n(self):
@@ -35,15 +53,7 @@ class natnumber(object):
                 if (self.n <= 1):
                         self.__factor.append(self.n)
                 else:
-                        den = 2
-                        num = self.n
-                        while (num/den != 1):
-                                if (num % den == 0):
-                                        self.__factor.append(den)
-                                        num = num/den
-                                else:
-                                        den += 1
-                        self.__factor.append(den)
+                        self.__calcfactors()
                 return self.__factor
 
         @property
