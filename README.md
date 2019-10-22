@@ -13,6 +13,8 @@ This is a description of classes that provides some math functions.
 
 	factor - returns the prime factors in a list
 
+	iseven - returns true if n is an even number	
+
 	isprime - returns true if n is prime otherwise false
 
 	istriangular - returns true if n is a triangular number

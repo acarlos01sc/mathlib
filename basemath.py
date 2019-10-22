@@ -8,6 +8,7 @@ from math import factorial
 #		n            - returns the n number used in constructor
 #		factorial    - returns the factorial number of n
 #		factor       - returns the list of prime factors of n
+#		iseven       - returns true if n is even
 #		isprime      - returns true if n is a prime number otherwise false
 #		istriangular - returns true if n is a triangular number
  
@@ -21,9 +22,20 @@ class natnumber(object):
         def __testn(self):
                 assert (isinstance(self.n, int) and (self.n >= 0)), 'Invalid natural number!'
                 
-        def __calcfactors(self):
-                den = 2
-                num = self.n
+        def __calcfactors_odd(self, numerator, denominator = 3):
+        	den = denominator
+        	num = numerator
+        	while (num/den != 1):
+                    if (num % den == 0):
+                        self.__factor.append(den)
+                        num /= den
+                    else:
+                        den += 2
+        	self.__factor.append(den)
+
+        def __calcfactors_even(self, numerator, denominator = 2):
+                den = denominator
+                num = numerator
                 while (num/den != 1):
                     if (num % den == 0):
                         self.__factor.append(den)
@@ -31,13 +43,10 @@ class natnumber(object):
                     else:
                         den += 1
                         break
-                while (num/den != 1):
-                    if (num % den == 0):
-                        self.__factor.append(den)
-                        num /= den
-                    else:
-                        den += 2
-                self.__factor.append(den)
+                if (num/den != 1):
+                    self.__calcfactors_odd(num)
+                else:
+                    self.__factor.append(den)
 
         @property
         def n(self):
@@ -52,9 +61,15 @@ class natnumber(object):
                 self.__factor.clear()
                 if (self.n <= 1):
                         self.__factor.append(self.n)
+                elif self.iseven:
+                        self.__calcfactors_even(self.n)
                 else:
-                        self.__calcfactors()
+                    self.__calcfactors_odd(self.n)
                 return self.__factor
+
+        @property
+        def iseven(self):
+            return ((self.n % 10) in [0,2,4,6,8])
 
         @property
         def isprime(self):
