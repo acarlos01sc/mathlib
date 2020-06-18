@@ -49,6 +49,16 @@ class natnumber(object):
                 else:
                     self.__factor.append(den)
 
+        def __calc_phi(self):
+                self.factor
+                phi = self.__n
+                ref = 1
+                for i in self.__factor:
+                        if (ref != i):
+                                ref = i
+                                phi *= (ref-1)/ref
+                return phi
+
         @property
         def n(self):
                 return self.__n
@@ -90,3 +100,7 @@ class natnumber(object):
                 return True
             else:
                 return False
+
+        @property
+        def phi(self):
+                return self.__calc_phi()
