@@ -17,7 +17,7 @@ class natnumber(object):
         def __init__(self, x):
                 self.__n = x
                 self.__factor = []
-                self.__factor_defined = false
+                self.__factor_defined = False
                 self.__testn()
 
         def __testn(self):
@@ -59,13 +59,15 @@ class natnumber(object):
 
         @property
         def factor(self):
-                self.__factor.clear()
-                if (self.n <= 1):
-                        self.__factor.append(self.n)
-                elif self.iseven:
-                        self.__calcfactors_even(self.n)
-                else:
-                    self.__calcfactors_odd(self.n)
+                if not(self.__factor_defined):
+                        self.__factor.clear()
+                        if (self.n <= 1):
+                                self.__factor.append(self.n)
+                        elif self.iseven:
+                                self.__calcfactors_even(self.n)
+                        else:
+                                self.__calcfactors_odd(self.n)
+                        self.__factor_defined = True
                 return self.__factor
 
         @property

@@ -25,5 +25,5 @@ This is a description of classes that provides some math functions.
 
 		x = natnumber(1577)
 
-		x.factor
+		print(x.factor)
 
