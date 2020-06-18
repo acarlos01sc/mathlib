@@ -17,6 +17,7 @@ class natnumber(object):
         def __init__(self, x):
                 self.__n = x
                 self.__factor = []
+                self.__factor_defined = false
                 self.__testn()
 
         def __testn(self):
