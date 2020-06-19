@@ -7,6 +7,7 @@ from math import factorial
 # the methods are:
 #		n            - returns the n number used in constructor
 #		factorial    - returns the factorial number of n
+#               phi          - returns Euler's totient function of n
 #		factor       - returns the list of prime factors of n
 #		iseven       - returns true if n is even
 #		isprime      - returns true if n is a prime number otherwise false

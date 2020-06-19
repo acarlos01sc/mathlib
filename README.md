@@ -13,6 +13,8 @@ This is a description of classes that provides some math functions.
 
 	factor - returns the prime factors in a list
 
+	phi - returns Euler's totient function of n
+
 	iseven - returns true if n is an even number	
 
 	isprime - returns true if n is prime otherwise false
