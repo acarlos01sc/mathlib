@@ -58,7 +58,7 @@ class natnumber(object):
                         if (ref != i):
                                 ref = i
                                 phi *= (ref-1)/ref
-                return phi
+                return round(phi)
 
         @property
         def n(self):
