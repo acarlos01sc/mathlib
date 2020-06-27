@@ -3,8 +3,8 @@ from math import factorial
 # basemath contains some basic math classes
 
 # class natnumber get some characteristics of a natural number
-# the constructor is natnumber(n) where n is a natural number
-# the methods are:
+# the constructor is natnumber(n) where n is a non zero natural
+# number. The methods are:
 #		n            - returns the n number used in constructor
 #		factorial    - returns the factorial number of n
 #               phi          - returns Euler's totient function of n
@@ -22,7 +22,7 @@ class natnumber(object):
                 self.__testn()
 
         def __testn(self):
-                assert (isinstance(self.n, int) and (self.n >= 0)), 'Invalid natural number!'
+                assert (isinstance(self.n, int) and (self.n > 0)), 'Invalid natural number!'
                 
         def __calcfactors_odd(self, numerator, denominator = 3):
         	den = denominator
