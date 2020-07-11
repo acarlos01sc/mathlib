@@ -1,10 +1,10 @@
 from math import factorial
 
-# basemath contains some basic math classes
+# basemath contains some basic math classes.
 
-# class natnumber get some characteristics of a natural number
-# the constructor is natnumber(n) where n is a non zero natural
-# number. The methods are:
+# class natnumber get some characteristics of a natural number.
+# the constructor is natnumber(n) where n is a natural number.
+# The methods are:
 #		n            - returns the n number used in constructor
 #		factorial    - returns the factorial number of n
 #               phi          - returns Euler's totient function of n
