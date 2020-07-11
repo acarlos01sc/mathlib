@@ -5,7 +5,7 @@ This is a description of classes that provides some math functions.
 
 1 - class natnumber
 
-	This class provides some methods exclusive to non zero natural numbers:
+	This class provides some methods exclusive to natural numbers:
 
 	n - returns the natural number
 

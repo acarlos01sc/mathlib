@@ -22,7 +22,7 @@ class natnumber(object):
                 self.__testn()
 
         def __testn(self):
-                assert (isinstance(self.n, int) and (self.n > 0)), 'Invalid natural number!'
+                assert (isinstance(self.n, int) and (self.n >= 0)), 'Invalid natural number!'
                 
         def __calcfactors_odd(self, numerator, denominator = 3):
         	den = denominator
@@ -104,4 +104,7 @@ class natnumber(object):
 
         @property
         def phi(self):
-                return self.__calc_phi()
+                if (self.n != 0):
+                        return self.__calc_phi()
+                else:
+                        print("Phi doesn't exist to number 0!")
